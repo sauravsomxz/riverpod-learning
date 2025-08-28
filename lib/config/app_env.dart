@@ -6,7 +6,7 @@ class AppEnv {
 
   /// Load environment variables (call this at app startup)
   static Future<void> load() async {
-    await dotenv.load(fileName: ".env");
+    await dotenv.load(fileName: ".env.dev");
 
     baseUrl = dotenv.env['BASE_URL']!;
     enableLogging = dotenv.env['ENABLE_LOGGING'] == "true";
