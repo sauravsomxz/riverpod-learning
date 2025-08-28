@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:riverpod_test/config/app_env.dart';
 import 'package:riverpod_test/pages/home_page.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await AppEnv.load();
   runApp(const MyApp());
 }
 

@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'package:riverpod_test/config/app_env.dart';
 import 'package:riverpod_test/core/utils/logger.dart';
 
 class ApiClient {
@@ -8,7 +9,7 @@ class ApiClient {
   ApiClient({String? baseUrl, this.enableLogging = false})
       : _dio = Dio(
     BaseOptions(
-      baseUrl: baseUrl!,
+      baseUrl: AppEnv.baseUrl,
       connectTimeout: const Duration(seconds: 10),
       receiveTimeout: const Duration(seconds: 15),
       headers: {
