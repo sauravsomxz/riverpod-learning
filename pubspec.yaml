@@ -36,6 +36,7 @@ dependencies:
   cupertino_icons: ^1.0.8
   dio: ^5.9.0 # for handling network calls
   flutter_dotenv: ^6.0.0 # for managing enviroments
+  flutter_riverpod: ^2.6.1 # for state management
 
 dev_dependencies:
   flutter_test:
@@ -58,6 +59,8 @@ flutter:
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
+  assets:
+    - .env.dev
 
   # To add assets to your application, add an assets section, like this:
   # assets:
